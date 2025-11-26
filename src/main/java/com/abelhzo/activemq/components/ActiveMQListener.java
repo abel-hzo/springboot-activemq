@@ -23,6 +23,7 @@ public class ActiveMQListener {
 	
 	Logger logger = LoggerFactory.getLogger(ActiveMQListener.class);
 
+	// Si el address no esta creado, esta anotación lo crea en automatico.
 	@JmsListener(destination = "my-destination")
 	public void handleMessage(MessageDTO messageDTO) throws JsonProcessingException {
 		

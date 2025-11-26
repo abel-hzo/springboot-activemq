@@ -55,7 +55,7 @@ public class PublishMessageServiceImpl implements PublishMessageService {
 
 		jmsTemplate.convertAndSend(messageDTO);
 
-		return new ResponseEntity<String>("Mensaje Enviado!!!", HttpStatus.OK);
+		return new ResponseEntity<String>("Mensaje Enviado!!!\n", HttpStatus.OK);
 	}
 
 	private void showHeaders(HttpServletRequest request) {

@@ -25,8 +25,8 @@ public class ActiveMQConfig {
 	public ConnectionFactory connectionFactory() {
 		ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
 		activeMQConnectionFactory.setBrokerURL("tcp://127.0.0.1:61616");
-		activeMQConnectionFactory.setUserName("admin");
-		activeMQConnectionFactory.setPassword("admin");
+		activeMQConnectionFactory.setUserName("abel-hzo");
+		activeMQConnectionFactory.setPassword("admin123");
 		activeMQConnectionFactory.setTrustAllPackages(true);
 		return activeMQConnectionFactory;
 	}
@@ -36,7 +36,7 @@ public class ActiveMQConfig {
 		JmsTemplate jmsTemplate = new JmsTemplate();
 		jmsTemplate.setConnectionFactory(connectionFactory());
 		jmsTemplate.setDefaultDestinationName("my-destination");
-		jmsTemplate.setPubSubDomain(true);
+		jmsTemplate.setPubSubDomain(true);   // False for Queues, True for Topics
 		return jmsTemplate;
 	}
 
@@ -51,7 +51,7 @@ public class ActiveMQConfig {
 		DefaultJmsListenerContainerFactory defaultJmsListenerContainerFactory = 
 				new DefaultJmsListenerContainerFactory();
 		defaultJmsListenerContainerFactory.setConnectionFactory(connectionFactory());
-		defaultJmsListenerContainerFactory.setPubSubDomain(true);
+		defaultJmsListenerContainerFactory.setPubSubDomain(true);  // False for Queues, True for Topics
 		return defaultJmsListenerContainerFactory;
 	}
 

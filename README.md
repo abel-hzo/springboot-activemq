@@ -1,9 +1,9 @@
 ## Demostración del uso de ActiveMQ Artemis con Java SpringBoot.
 
 La siguiente aplicación nos muestra como conectarse a un sistema de broker (ActiveMQ Artemisa), el envío y recibimiento del mensaje.
-
+***
 ### 1.- La descarga e instalación de ActiveMQ Artemis es para Debian 12:
-
+***
 1. Descargar de:
   - https://activemq.apache.org/components/artemis/download/
   - apache-artemis-2.44.0-bin.tar.gz
@@ -13,7 +13,7 @@ La siguiente aplicación nos muestra como conectarse a un sistema de broker (Act
   - <code>sudo mousepad bash.bashrc</code>
 4. Al final del archivo colocamos:  
   - <code>export PATH=$PATH:/opt/apache-artemis-2.44.0/bin</code>
-
+***
 ### 2.- Una vez descomprimido y configurado en una nueva terminal podemos ejecutar ActiveMQ Artemis:
 ***
 1. Nos posicionamos en la carpeta donde queremos crear nuestra instancia:
@@ -25,7 +25,7 @@ La siguiente aplicación nos muestra como conectarse a un sistema de broker (Act
 
 <img width="862" height="741" alt="Image" src="https://github.com/user-attachments/assets/0a9e04e3-4fc2-490b-a071-e499ed26fc1c" />
 
-3. Creamos una nueva instancia:
+<br> 3. Creamos una nueva instancia:
   - <code>Apache ActiveMQ Artemis 2.44.0 > create mybroker
     user: abel-hzo
     password: admin123
@@ -54,7 +54,7 @@ La siguiente aplicación nos muestra como conectarse a un sistema de broker (Act
 
 <br><img width="837" height="388" alt="Image" src="https://github.com/user-attachments/assets/b38ffc07-3a5e-49e3-baec-b35611d1294f" />
 
-7. Al ejecutar la aplicación, podemos ver como nos aparece en la tab de Consumers:
+<br> 7. Al ejecutar la aplicación, podemos ver como nos aparece en la tab de Consumers:
 
 <img width="1147" height="421" alt="Image" src="https://github.com/user-attachments/assets/24c5d551-c3fd-425d-8a95-037f9c534db7" />
 
